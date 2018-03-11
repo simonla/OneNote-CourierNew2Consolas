@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Macro name="CourierNew2Consolas" category="Font" description="Transform Courier New to Consolas for more beautiful" version="19">
+  <Comment text="For each Text in CurrentPage" />
+  <ForEach var="Text">
+    <Array>QueryObjects("Text", GetCurrentPage())</Array>
+    <If>
+      <Condition>$Text.fontName == "Courier New"</Condition>
+      <Expression>$Text.fontName = "Consolas"</Expression>
+    </If>
+  </ForEach>
+</Macro>
